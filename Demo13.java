@@ -60,4 +60,16 @@ public class Demo13 {
             throw new Exception(e);
         }
     }
+
+    static void myMethod() throws ClassNotFoundException, SQLException {
+        System.out.println("Hello World!");
+    }
+
+    static {
+        try {
+            myMethod();
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
