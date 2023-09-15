@@ -13,7 +13,11 @@ public class Demo17 {
             throw ex;
         } finally {
             System.out.println("Entering into the final block");
-            System.out.println(5 / 0);
+            try{
+                System.out.println(5 / 0);
+            }catch (ArithmeticException ex){
+                System.out.println(ex);
+            }
             System.out.println("Exiting from the finally block");
         }
     }
